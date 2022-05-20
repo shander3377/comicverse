@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+	<title>Comicverse</title>
+    <meta charset="utf-8" />
+	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	<script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+	<script src="js/Poster.js"></script>
+	
+</head>
+<body>
+	<a-scene background="color: #90caf9">
+		<a-plane
+			id="ground"
+			color="#78909c"
+			width="200"
+			height="100"
+			rotation="-90 0 0"
+		></a-plane>
+
+		<a-entity id="poster-container" comics-poster></a-entity>
+		<a-camera
+			id="camera"
+			wasd-controls="enabled: false"
+			position="0 10 0"
+		></a-camera>
+
+		<!-- App Title -->
+		<a-entity
+			id="app-title"
+			position="0 0.73 -1"
+			text="font: exo2bold; align: center; width: 2; color: #000; value: Comicverse"
+		>
+			<a-entity
+				id="app-subtitle"
+				position="0 -0.1 0"
+				text="font: dejavu; align: center; width: 1; color: #0F184E; value: Explore the whole universe of comics"
+			></a-entity>
+		</a-entity>
+	</a-scene>
+</body>
