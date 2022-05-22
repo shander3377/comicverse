@@ -43,11 +43,13 @@ AFRAME.registerComponent("comics-poster", {
 		
 
 			this.placesContainer.appendChild(borderEl);
+			console.log(borderEl)
 		}
 	},
 
 	createBorder: function (pos, id) {
 		const el = document.createElement("a-entity");
+		console.log(id)
 		el.setAttribute("id", id);
 		el.setAttribute("material", { color: "white", opacity: 1 });
 		el.setAttribute("geometry", {
@@ -57,6 +59,7 @@ AFRAME.registerComponent("comics-poster", {
 		});
 		el.setAttribute("position", pos);
 		el.setAttribute("visible", true);
+		el.setAttribute("highlight", {});
 
 		return el;
 	},
