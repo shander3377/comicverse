@@ -1,6 +1,6 @@
 AFRAME.registerComponent("comics-poster", {
 	init: function () {
-		this.placesContainer = this.el;
+		this.posterContainer = this.el;
 		this.createCards();
 	},
 
@@ -30,7 +30,7 @@ AFRAME.registerComponent("comics-poster", {
 		let previousxposition = -60;
 		for (var i = 0; i < data.length; i++) {
 			const posx = previousxposition + 25;
-			const posy = 10;
+			const posy = 15;
 			const posz = -40;
 			const position = { x: posx, y: posy, z: posz };
 			previousxposition = posx;
@@ -42,7 +42,7 @@ AFRAME.registerComponent("comics-poster", {
 
 		
 
-			this.placesContainer.appendChild(borderEl);
+			this.posterContainer.appendChild(borderEl);
 			console.log(borderEl)
 		}
 	},
@@ -55,7 +55,7 @@ AFRAME.registerComponent("comics-poster", {
 		el.setAttribute("geometry", {
             primitive: "plane",
             width: 22,
-            height: 40
+            height: 30
 		});
 		el.setAttribute("position", pos);
 		el.setAttribute("visible", true);
@@ -67,7 +67,7 @@ AFRAME.registerComponent("comics-poster", {
     createThumbnail: function (item) {
 		const el = document.createElement("a-entity");
 		el.setAttribute("material", { src: item.src });
-        el.setAttribute("position", { x: 0, y: 5, z: 0.1 });
+        el.setAttribute("position", { x: 0, y: 0, z: 0.1 });
 
 		el.setAttribute("visible", true);
 		el.setAttribute("geometry", {
