@@ -19,15 +19,11 @@ AFRAME.registerComponent("highlight", {
 				posterContainer.setAttribute("highlight", {
 					selectedItemId: id,
 				});
-				// var camera = document.querySelector("#camera")
-				// var cameraPos = camera.getAttribute("position")
-				// cameraPos.z -= 10
-				// console.log(cameraPos)
-				// camera.setAttribute("position", cameraPos)
+			
 				this.el.setAttribute("material", { color: "#1565c0" });
-				var pos = this.el.getAttribute("position");
-				pos.z += 10;
-				this.el.setAttribute("position", pos);
+				// var pos = this.el.getAttribute("position");
+				// pos.z += 10;
+				// this.el.setAttribute("position", pos);
 			}
 		});
 	},
@@ -42,14 +38,10 @@ AFRAME.registerComponent("highlight", {
 				//checking if wrong selectedItemId is not there, if its not there then it will run perfectly fine
 				if (id === selectedItemId) {
 					el.setAttribute("material", { color: "white" });
-					var pos = el.getAttribute("position");
-					pos.z -= 10;
-					el.setAttribute("position", pos);
-					// 				var camera = document.querySelector("#camera")
-					// var cameraPos = camera.getAttribute("position")
-					// cameraPos.z += 10
-					// console.log(cameraPos)
-					// camera.setAttribute("position", cameraPos)
+					// var pos = el.getAttribute("position");
+					// pos.z -= 10;
+					// el.setAttribute("position", pos);
+				
 				}
 			}
 			// 	selectedItemEl.setAttribute("material", { color: "white" });
